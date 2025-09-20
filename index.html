@@ -1619,7 +1619,16 @@
       }
 
       bindEvents() {
-        document.getElementById('addBtn').addEventListener('click', () => this.addPlayer());
+        const addBtn = document.getElementById('addBtn');
+        console.log('Add button element:', addBtn);
+        if (addBtn) {
+          addBtn.addEventListener('click', () => {
+            console.log('Add Player button clicked!');
+            this.addPlayer();
+          });
+        } else {
+          console.error('Add button not found!');
+        }
         document.getElementById('removeBtn').addEventListener('click', () => this.removeLastPlayer());
         document.getElementById('clearAllBtn').addEventListener('click', () => this.clearAllPlayers());
         document.getElementById('exportJsonBtn').addEventListener('click', () => this.exportJson());
@@ -1639,6 +1648,7 @@
       }
 
       addPlayer() {
+        console.log('addPlayer method called');
         const playerId = `player_${this.playerCounter++}`;
         const player = {
           id: playerId,
@@ -1649,6 +1659,7 @@
         };
         
         this.players.push(player);
+        console.log('Player added:', player);
         this.renderPlayer(player);
         this.updateUI();
       }
