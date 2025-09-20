@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Alliance Dread Calculator - Weekend Kill Tracker</title>
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="./manifest.json">
   <meta name="theme-color" content="#1a1a2e">
   <meta name="description" content="Track dreadnought kills for alliance players each weekend">
   <meta name="keywords" content="alliance, dreadnought, calculator, gaming, tracker, PWA">
@@ -25,10 +25,10 @@
   <meta http-equiv="X-XSS-Protection" content="1; mode=block">
   
   <!-- PWA Icons -->
-  <link rel="apple-touch-icon" href="icons/icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512x512.png">
-  <link rel="shortcut icon" href="icons/icon-192x192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./icons/icon-512x512.png">
+  <link rel="shortcut icon" href="./icons/icon-192x192.png">
   <style>
     :root {
       /* Light Theme */
@@ -3424,7 +3424,7 @@
 
     // Service Worker registration
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js').then(registration => {
+      navigator.serviceWorker.register('./sw.js', { scope: './' }).then(registration => {
         console.log('SW registered: ', registration);
         
         registration.addEventListener('updatefound', () => {

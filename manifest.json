@@ -90,7 +90,7 @@
       "name": "New Week",
       "short_name": "New Week",
       "description": "Start a new week of tracking",
-      "url": "/?action=new-week",
+      "url": "./?action=new-week",
       "icons": [
         {
           "src": "icons/icon-96x96.png",
@@ -102,7 +102,7 @@
       "name": "View History",
       "short_name": "History",
       "description": "View weekly history",
-      "url": "/?action=history",
+      "url": "./?action=history",
       "icons": [
         {
           "src": "icons/icon-96x96.png",
